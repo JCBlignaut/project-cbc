@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div style="padding-bottom:2em; width:100%; background-color:transparent;">
+<br>
+<div class="jumbotron well" style="background-color: rgba(68,137,139, 0.10); box-shadow: 0 0 30px rgba(68,137,139, 0.50)"><center><h1 style="color:rgb(68,137,139); font-family: 'Quicksand', sans-serif;">BOOKING FORM</h1></center></div>
+<div style="width:70%; margin:0 auto;">
+<form action = "post_booking" method = "post">
+{% csrf_token %}
+<div class="well" style="width:45%; margin:0 auto; background-color: rgba(68,137,139,0.75); border: 1.5px solid white; border-radius:25px; box-shadow: 0 0 30px rgba(68,137,139, 0.50)">
+<div style="width:80%; margin:0 auto;padding-top:35px; padding-bottom:15px;">
+{{ form.client_name }}
+<br>
+{{ form.client_email }}
+<br>
+{{ form.treatment }}
+<br>
+{{ form.therapist }}
+<br>
+{{ form.booking_date }}
+<br>
+{{ form.booking_time }}
+<br>
+<center><button type="submit" class="btn btn-primary btn-block btn-lg" style="width:90%">Submit</button></center>
+</div>
+</div>
+</form>
+</div>
+</div>
+
+{% endblock %}
+
+{% block extra_scripts %}
+
+{% if form.errors %}
+    {% for field in form %}
+        {% for error in field.errors %}
+            <script>
+			  $(document).ready(function() {
+			    $.notify({
+			      title: 'Error: ',
+			      message: '{{ error|escape }}',
+			    },{
+			      type: 'info',
+			      delay: 1000,
+			    });
+			  });
+			</script>
+        {% endfor %}
+    {% endfor %}
+    {% for error in form.non_field_errors %}
+        <script>
+		  $(document).ready(function() {
+		    $.notify({
+		      title: 'Error: ',
+		      message: '{{ error|escape }}',
+		    },{
+		      type: 'info',
+		      delay: 1000,
+		    });
+		  });
+		</script>
+    {% endfor %}
+{% endif %}
+
+{% endblock %}
