@@ -25,7 +25,7 @@ SECRET_KEY = '9dyvr@5q5n(v-c8qi09p42)rqbf5@*lf+*t4+2+8v3kc-96j!-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'juststhings.pythonanywhere.com']
 
 # Django-allauth backends
 AUTHENTICATION_BACKENDS = [
