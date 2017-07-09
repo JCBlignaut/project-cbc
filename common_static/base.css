@@ -6,7 +6,6 @@ html {
 body {
 	position: relative;
 	height: 100%;
-	padding-top:50px;
 }
 
 footer {
@@ -39,8 +38,12 @@ footer {
 	box-shadow: 0 0 30px rgba(68,137,139, 0.10);
 }
 
+.navbar-brand {
+	height: 80px;
+}
+
 .navbar li { 
-	color: #000;
+	color: rgb(220,220,220);
 }
 
 .nav.navbar-nav a:hover {
@@ -50,6 +53,22 @@ footer {
 .nav a{
     font-size: 1.75em !important;
     font-family: 'Cookie', cursive;
+    height: 80px;
+}
+
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:focus, 
+.navbar-default .navbar-nav>.active>a:hover {
+	color: rgb(112,128,144);
+    background-color: rgba(220,220,220,0.5);
+}
+
+.navbar-nav li a {
+	line-height: 50px;
+}
+
+.navbar-btn {
+	margin-top: 25px;
 }
 
 .navbar-brand {

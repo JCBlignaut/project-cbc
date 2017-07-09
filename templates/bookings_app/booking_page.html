@@ -3,13 +3,13 @@
 
 {% block content %}
 
-<div style="padding-bottom:2em; width:100%; background-color:transparent;">
+<div class="container-fluid" style="padding-top:80px; padding-bottom:2em; width:100%; background-color:transparent;">
 <br>
 <div class="jumbotron well" style="background-color: rgba(68,137,139, 0.10); box-shadow: 0 0 30px rgba(68,137,139, 0.50)"><center><h1 style="color:rgb(68,137,139); font-family: 'Quicksand', sans-serif;">BOOKING FORM</h1></center></div>
-<div style="width:70%; margin:0 auto;">
+<div class = "container-fluid" style="width:70%; margin:0 auto;">
 <form action = "post_booking" method = "post">
 {% csrf_token %}
-<div class="well" style="width:45%; margin:0 auto; background-color: rgba(68,137,139,0.75); border: 1.5px solid white; border-radius:25px; box-shadow: 0 0 30px rgba(68,137,139, 0.50)">
+<div class="well" style="width:45%; min-width:300px; margin:0 auto; background-color: rgba(68,137,139,0.75); border: 1.5px solid white; border-radius:25px; box-shadow: 0 0 30px rgba(68,137,139, 0.50)">
 <div style="width:80%; margin:0 auto;padding-top:35px; padding-bottom:15px;">
 {{ form.client_name }}
 <br>

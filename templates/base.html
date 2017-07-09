@@ -18,6 +18,7 @@
 
   <link rel="stylesheet" type="text/css" href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.min.css' %}" />
   <link rel="stylesheet" type="text/css" href="{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'animate-css/css/animate.css' %}" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC|Cabin+Sketch|Cookie|Great+Vibes|Open+Sans|Poiret+One|Quicksand|Special+Elite|Tangerine|Ubuntu">
 
   {% block extra_head %}
@@ -37,8 +38,8 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>                        
         </button>
-      <a class="navbar-brand" href="/">Project CBC</a>
-      <a href = "{% url 'booking_page' %}" class="btn btn-default btn-sm navbar-btn navbar-right" role="button" title="Book Now">
+      <a class="navbar-brand" href="/"><img alt="Project CBC" src="{% static '/img/body_clinic_name.png' %}" style="height:50px;"></a>
+      <a href = "{% url 'booking_page' %}" class="btn btn-default navbar-btn navbar-right" role="button" title="Book Now">
         <strong>BOOK NOW</strong>
       </a>
     </div>
